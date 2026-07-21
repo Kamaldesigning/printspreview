@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PrintsPreview</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -13,45 +13,37 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
+font-family:Poppins,sans-serif;
 }
 
 body{
 background:#fff;
 color:#111;
-overflow-x:hidden;
 }
 
-/* HEADER */
-
 header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
 background:#000;
-padding:18px 6%;
+padding:18px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-z-index:999;
-box-shadow:0 5px 20px rgba(0,0,0,.2);
 }
 
-.logo img{
-height:55px;
-display:block;
-}
-
-nav{
+.logo{
+width:180px;
+height:60px;
+border:2px dashed #FFC107;
 display:flex;
-gap:35px;
+align-items:center;
+justify-content:center;
+color:#FFC107;
+font-weight:bold;
 }
 
 nav a{
 color:#fff;
 text-decoration:none;
+margin-left:30px;
 font-weight:500;
 transition:.3s;
 }
@@ -60,197 +52,159 @@ nav a:hover{
 color:#FFC107;
 }
 
-/* HERO */
-
 .hero{
 
-width:100%;
-min-height:100vh;
-padding:120px 6% 80px;
 display:flex;
 justify-content:space-between;
 align-items:center;
+padding:80px 8%;
 background:#000;
-
-}
-
-.hero-left{
-
-width:48%;
-
-}
-
-.hero-small{
-
-color:#FFC107;
-letter-spacing:3px;
-margin-bottom:20px;
-font-weight:600;
-
-}
-
-.hero-left h1{
-
-font-size:72px;
-line-height:78px;
 color:#fff;
+
+}
+
+.hero-text{
+max-width:600px;
+}
+
+.hero h1{
+font-size:60px;
+line-height:70px;
 font-weight:800;
-
 }
 
-.hero-left h1 span{
-
+.hero span{
 color:#FFC107;
-
 }
 
-.hero-left p{
-
-margin-top:25px;
+.hero p{
+margin-top:20px;
 font-size:18px;
-line-height:32px;
 color:#ddd;
-
 }
 
-.hero-buttons{
-
-margin-top:40px;
-
-}
-
-.btn-yellow{
+.btn{
 
 display:inline-block;
-padding:16px 40px;
+margin-top:35px;
+padding:15px 40px;
 background:#FFC107;
 color:#000;
 text-decoration:none;
-font-weight:700;
+font-weight:bold;
 border-radius:50px;
-margin-right:15px;
-transition:.3s;
 
 }
 
-.btn-yellow:hover{
+.hero-image{
 
-transform:translateY(-4px);
-
-}
-
-.btn-outline{
-
-display:inline-block;
-padding:16px 40px;
-border:2px solid #FFC107;
+width:450px;
+height:350px;
+border:3px dashed #FFC107;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+font-weight:bold;
 color:#FFC107;
-text-decoration:none;
+
+}
+
+.services{
+
+padding:80px 8%;
+
+}
+
+.title{
+
+text-align:center;
+font-size:40px;
 font-weight:700;
-border-radius:50px;
+
+}
+
+.title span{
+
+color:#FFC107;
+
+}
+
+.grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:50px;
+
+}
+
+.card{
+
+padding:40px;
+text-align:center;
+border:2px solid #eee;
 transition:.3s;
 
 }
 
-.btn-outline:hover{
+.card:hover{
 
-background:#FFC107;
-color:#000;
-
-}
-
-/* HERO IMAGE */
-
-.hero-right{
-
-width:45%;
+background:#000;
+color:#fff;
+border-color:#FFC107;
+transform:translateY(-8px);
 
 }
 
-.hero-banner{
-
-width:100%;
-height:520px;
-border-radius:20px;
-overflow:hidden;
-border:3px solid #FFC107;
-
-}
-
-.hero-banner img{
-
-width:100%;
-height:100%;
-object-fit:cover;
-display:block;
-
-}
-
-/* MOBILE */
-
-@media(max-width:991px){
-
-header{
-
-padding:15px 5%;
-flex-direction:column;
-
-}
-
-.logo{
+.card h3{
 
 margin-bottom:15px;
 
 }
 
-nav{
+.about{
 
-flex-wrap:wrap;
-justify-content:center;
-gap:18px;
-
-}
-
-.hero{
-
-padding:150px 5% 60px;
-flex-direction:column;
+background:#000;
+color:#fff;
+padding:80px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
 
 }
 
-.hero-left{
+.about div{
 
-width:100%;
+width:48%;
+
+}
+
+.about h2{
+
+font-size:40px;
+margin-bottom:20px;
+
+}
+
+.about span{
+
+color:#FFC107;
+
+}
+
+footer{
+
+background:#111;
+color:#fff;
+padding:40px;
 text-align:center;
 
 }
 
-.hero-left h1{
+footer span{
 
-font-size:42px;
-line-height:50px;
-
-}
-
-.hero-left p{
-
-font-size:16px;
-line-height:28px;
-
-}
-
-.hero-right{
-
-width:100%;
-margin-top:40px;
-
-}
-
-.hero-banner{
-
-height:300px;
-
-}
+color:#FFC107;
 
 }
 
@@ -263,18 +217,16 @@ height:300px;
 <header>
 
 <div class="logo">
-
-<img src="YOUR_LOGO_IMAGE_LINK" alt="Logo">
-
+YOUR LOGO
 </div>
 
 <nav>
 
 <a href="#">Home</a>
-<a href="#services">Services</a>
-<a href="#portfolio">Portfolio</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
+<a href="#">Services</a>
+<a href="#">Portfolio</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
 
 </nav>
 
@@ -282,212 +234,126 @@ height:300px;
 
 <section class="hero">
 
-<div class="hero-left">
-
-<div class="hero-small">
-
-PRINT • DESIGN • BRANDING
-
-</div>
+<div class="hero-text">
 
 <h1>
-
-Printing That
-<span>Builds</span>
-Your Brand
-
+PRINT.<br>
+<span>DESIGN.</span><br>
+DELIVER.
 </h1>
 
 <p>
 
-Premium Printing Services,
-Graphic Designing,
-Branding,
-Packaging,
-Offset Printing,
-Digital Printing,
-Visiting Cards,
-Flex Printing,
-ACP Sign Boards,
-Stickers & Much More.
+Professional Printing &
+Creative Designing Solutions.
 
 </p>
 
-<div class="hero-buttons">
-
-<a href="#" class="btn-yellow">
-
-Get Free Quote
-
-</a>
-
-<a href="#" class="btn-outline">
-
-View Portfolio
-
+<a href="#" class="btn">
+Get Quote
 </a>
 
 </div>
 
-</div>
+<div class="hero-image">
 
-<div class="hero-right">
-
-<div class="hero-banner">
-
-<img src="YOUR_BANNER_IMAGE_LINK" alt="Banner">
-
-</div>
+Website Banner Image
 
 </div>
 
 </section>
 
-<!-- PART 2 STARTS HERE -->
+<section class="services">
 
-</body>
-</html>
-<!-- ===========================
-     SERVICES SECTION
-=========================== -->
+<h2 class="title">
+Our <span>Services</span>
+</h2>
 
-<section id="services" class="services">
+<div class="grid">
 
-<div class="section-title">
-<h2>Our <span>Services</span></h2>
-<p>Professional Printing & Graphic Designing Solutions</p>
-</div>
-
-<div class="service-grid">
-
-<div class="service-card">
-<div class="icon">🖨️</div>
-<h3>Digital Printing</h3>
-<p>High Quality Digital Printing for Business & Personal Needs.</p>
-</div>
-
-<div class="service-card">
-<div class="icon">📇</div>
+<div class="card">
 <h3>Visiting Cards</h3>
-<p>Premium Business Cards with Luxury Finish.</p>
+<p>Premium business cards.</p>
 </div>
 
-<div class="service-card">
-<div class="icon">🎨</div>
-<h3>Graphic Design</h3>
-<p>Creative Logo, Posters, Flyers & Social Media Designs.</p>
-</div>
-
-<div class="service-card">
-<div class="icon">🏢</div>
-<h3>ACP Sign Board</h3>
-<p>Premium Outdoor & Indoor Sign Board Solutions.</p>
-</div>
-
-<div class="service-card">
-<div class="icon">🖼️</div>
+<div class="card">
 <h3>Flex Printing</h3>
-<p>Indoor & Outdoor Flex Printing with Vibrant Colors.</p>
+<p>Outdoor & Indoor Flex.</p>
 </div>
 
-<div class="service-card">
-<div class="icon">📖</div>
+<div class="card">
 <h3>Offset Printing</h3>
-<p>Books, Bill Books, Brochures & Stationery Printing.</p>
+<p>Books, Bills & Stationery.</p>
 </div>
 
-<div class="service-card">
-<div class="icon">🏷️</div>
-<h3>Sticker Printing</h3>
-<p>Vinyl, Label & Product Stickers.</p>
+<div class="card">
+<h3>Digital Printing</h3>
+<p>Fast & High Quality.</p>
 </div>
 
-<div class="service-card">
-<div class="icon">👕</div>
-<h3>T-Shirt Printing</h3>
-<p>Custom T-Shirts, Caps & Merchandise Printing.</p>
+<div class="card">
+<h3>Logo Design</h3>
+<p>Creative Brand Identity.</p>
+</div>
+
+<div class="card">
+<h3>Graphic Design</h3>
+<p>Posters, Flyers & Brochures.</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- ===========================
- WHY CHOOSE US
-=========================== -->
+<section class="about">
 
-<section id="about" class="why">
+<div>
 
-<div class="why-left">
-
-<h2>Why Choose <span>PrintsPreview</span></h2>
+<h2>Why <span>PrintsPreview?</span></h2>
 
 <p>
 
-We combine Creativity,
-Technology &
-Premium Printing Quality
-to build your Brand.
+✔ Premium Quality Printing<br><br>
+
+✔ Fast Delivery<br><br>
+
+✔ Creative Designing<br><br>
+
+✔ Affordable Price<br><br>
+
+✔ Customer Satisfaction
 
 </p>
 
-<ul>
-
-<li>✔ Premium Printing Quality</li>
-<li>✔ Fast Delivery</li>
-<li>✔ Creative Graphic Designing</li>
-<li>✔ Affordable Pricing</li>
-<li>✔ Experienced Team</li>
-<li>✔ 100% Customer Satisfaction</li>
-
-</ul>
-
 </div>
 
-<div class="why-right">
+<div class="hero-image">
 
-<img src="YOUR_ABOUT_IMAGE_LINK" alt="About">
+Your Work Preview
 
 </div>
 
 </section>
 
-<!-- ===========================
- COUNTERS
-=========================== -->
+<footer>
 
-<section class="counter">
+<h3>PRINTSPREVIEW</h3>
 
-<div class="counter-box">
+<p>
 
-<h2>5000+</h2>
+All Types of Printing | Designing | Branding
 
-<p>Happy Customers</p>
+</p>
 
-</div>
+<br>
 
-<div class="counter-box">
+<p>
 
-<h2>25000+</h2>
+© 2026 <span>PrintsPreview</span>. All Rights Reserved.
 
-<p>Projects Completed</p>
+</p>
 
-</div>
+</footer>
 
-<div class="counter-box">
-
-<h2>10+</h2>
-
-<p>Years Experience</p>
-
-</div>
-
-<div class="counter-box">
-
-<h2>24/7</h2>
-
-<p>Customer Support</p>
-
-</div>
-
-</section>
+</body>
+</html>
