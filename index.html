@@ -2,65 +2,166 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>PrintsPreview</title>
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
 body{background:#fff;color:#111}
-header,footer{background:#000;color:#fff;padding:20px;text-align:center}
-.hero,.about{display:flex;gap:30px;align-items:center;justify-content:space-between;padding:50px;background:#111;color:#fff}
-.hero img,.about img{width:45%;max-width:500px;border:3px solid #FFC107;border-radius:12px}
-.hero .text,.about .text{width:50%}
-span{color:#FFC107}
-.btn{display:inline-block;margin-top:20px;padding:12px 24px;background:#FFC107;color:#000;text-decoration:none;border-radius:30px}
-.services{padding:50px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px}
-.card{border:1px solid #ddd;padding:20px;text-align:center}
+header{background:#000;color:#fff;padding:15px 8%;display:flex;justify-content:space-between;align-items:center}
+header img{height:60px}
+nav a{color:#fff;text-decoration:none;margin-left:20px}
+nav a:hover{color:#FFC107}
+.hero{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:60px 8%;background:#111;color:#fff}
+.hero div{flex:1;min-width:300px}
+.hero h1{font-size:55px;line-height:1.1}
+.hero span{color:#FFC107}
+.hero img{width:100%;max-width:500px;border-radius:15px}
+.btn{display:inline-block;margin-top:20px;padding:12px 30px;background:#FFC107;color:#000;text-decoration:none;border-radius:30px;font-weight:bold}
+section{padding:70px 8%}
+h2{text-align:center;margin-bottom:40px}
+h2 span{color:#FFC107}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{padding:25px;border:1px solid #ddd;border-radius:10px;transition:.3s}
+.card:hover{background:#000;color:#fff;border-color:#FFC107;transform:translateY(-5px)}
+.gallery img{width:100%;border-radius:10px}
+.about{display:flex;flex-wrap:wrap;align-items:center;gap:40px}
+.about img{width:100%;max-width:500px;border-radius:15px}
+footer{background:#000;color:#fff;text-align:center;padding:30px}
+.whatsapp{position:fixed;right:20px;bottom:20px;background:#25D366;color:#fff;padding:15px 18px;border-radius:50%;text-decoration:none;font-size:24px}
 </style>
+
 <script>
-const LOGO="https://via.placeholder.com/180x60?text=LOGO";
-const HERO="https://via.placeholder.com/800x500?text=Hero+Image";
-const ABOUT="https://via.placeholder.com/800x500?text=About+Image";
+const LOGO="https://via.placeholder.com/200x60?text=LOGO";
+const HERO="https://via.placeholder.com/800x500?text=Hero+Banner";
+const ABOUT="https://via.placeholder.com/800x500?text=About";
+const GALLERY=[
+"https://via.placeholder.com/500?text=Sticker",
+"https://via.placeholder.com/500?text=Packaging",
+"https://via.placeholder.com/500?text=Labels",
+"https://via.placeholder.com/500?text=Banner",
+"https://via.placeholder.com/500?text=Visiting+Card",
+"https://via.placeholder.com/500?text=Offset"
+];
 </script>
+
 </head>
 <body>
-<header><img id="logo" style="height:60px"><h2>PrintsPreview</h2></header>
+
+<header>
+<img id="logo">
+<nav>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
 
 <section class="hero">
-<div class="text">
+<div>
 <h1>DESIGN.<br><span>PRINT.</span><br>DELIVER.</h1>
-<p>Professional Printing & Creative Designing Solutions.</p>
-<a class="btn" href="#">Get Quote</a>
+<p>Premium Printing & Branding Solutions.</p>
+<a href="#" class="btn">Get Quote</a>
 </div>
-<img id="heroImg">
+<div><img id="hero"></div>
 </section>
 
-<section class="services">
+<section id="services">
 <h2>Our <span>Services</span></h2>
+
 <div class="grid">
-<div class="card">Visiting Cards</div>
-<div class="card">Flex Printing</div>
-<div class="card">Offset Printing</div>
-<div class="card">Digital Printing</div>
-<div class="card">Logo Design</div>
-<div class="card">Graphic Design</div>
+
+<div class="card">🏷 Sticker Printing</div>
+
+<div class="card">📦 Packaging Design</div>
+
+<div class="card">🛍 Product Labels</div>
+
+<div class="card">🖨 Banner Printing</div>
+
+<div class="card">📄 Brochure & Catalogue</div>
+
+<div class="card">💳 Visiting Cards</div>
+
+<div class="card">📚 Offset Printing</div>
+
+<div class="card">🎨 Brand Identity</div>
+
+<div class="card">📱 Social Media Design</div>
+
 </div>
+
+</section>
+
+<section id="gallery">
+
+<h2>Our <span>Work</span></h2>
+
+<div class="grid gallery">
+<img id="g1">
+<img id="g2">
+<img id="g3">
+<img id="g4">
+<img id="g5">
+<img id="g6">
+</div>
+
 </section>
 
 <section class="about">
-<div class="text">
+
+<div>
 <h2>Why <span>PrintsPreview?</span></h2>
-<p>✔ Premium Quality Printing<br>✔ Fast Delivery<br>✔ Creative Designing<br>✔ Affordable Price</p>
+
+<p>
+✔ Premium Printing<br><br>
+✔ Fast Delivery<br><br>
+✔ High Quality Material<br><br>
+✔ Affordable Price<br><br>
+✔ Creative Designs
+</p>
+
 </div>
-<img id="aboutImg">
+
+<div>
+<img id="about">
+</div>
+
 </section>
 
-<footer>© 2026 PrintsPreview</footer>
+<footer id="contact">
+
+<h3>PRINTSPREVIEW</h3>
+
+<p>
+Sticker Printing | Packaging | Labels | Banner Printing | Branding
+</p>
+
+<p>📞 +91 XXXXXXXXXX</p>
+
+<p>✉ info@printspreview.com</p>
+
+<p>©2026 PrintsPreview</p>
+
+</footer>
+
+<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX">💬</a>
 
 <script>
-document.getElementById("logo").src=LOGO;
-document.getElementById("heroImg").src=HERO;
-document.getElementById("aboutImg").src=ABOUT;
+
+logo.src=LOGO;
+hero.src=HERO;
+about.src=ABOUT;
+
+g1.src=GALLERY[0];
+g2.src=GALLERY[1];
+g3.src=GALLERY[2];
+g4.src=GALLERY[3];
+g5.src=GALLERY[4];
+g6.src=GALLERY[5];
+
 </script>
+
 </body>
 </html>
