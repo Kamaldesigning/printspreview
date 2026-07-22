@@ -4,356 +4,63 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PrintsPreview</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins,sans-serif;
-}
-
-body{
-background:#fff;
-color:#111;
-}
-
-header{
-background:#000;
-padding:18px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.logo{
-width:180px;
-height:60px;
-border:2px dashed #FFC107;
-display:flex;
-align-items:center;
-justify-content:center;
-color:#FFC107;
-font-weight:bold;
-}
-
-nav a{
-color:#fff;
-text-decoration:none;
-margin-left:30px;
-font-weight:500;
-transition:.3s;
-}
-
-nav a:hover{
-color:#FFC107;
-}
-
-.hero{
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:80px 8%;
-background:#000;
-color:#fff;
-
-}
-
-.hero-text{
-max-width:600px;
-}
-
-.hero h1{
-font-size:60px;
-line-height:70px;
-font-weight:800;
-}
-
-.hero span{
-color:#FFC107;
-}
-
-.hero p{
-margin-top:20px;
-font-size:18px;
-color:#ddd;
-}
-
-.btn{
-
-display:inline-block;
-margin-top:35px;
-padding:15px 40px;
-background:#FFC107;
-color:#000;
-text-decoration:none;
-font-weight:bold;
-border-radius:50px;
-
-}
-
-.hero-image{
-
-width:450px;
-height:350px;
-border:3px dashed #FFC107;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:28px;
-font-weight:bold;
-color:#FFC107;
-
-}
-
-.services{
-
-padding:80px 8%;
-
-}
-
-.title{
-
-text-align:center;
-font-size:40px;
-font-weight:700;
-
-}
-
-.title span{
-
-color:#FFC107;
-
-}
-
-.grid{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-margin-top:50px;
-
-}
-
-.card{
-
-padding:40px;
-text-align:center;
-border:2px solid #eee;
-transition:.3s;
-
-}
-
-.card:hover{
-
-background:#000;
-color:#fff;
-border-color:#FFC107;
-transform:translateY(-8px);
-
-}
-
-.card h3{
-
-margin-bottom:15px;
-
-}
-
-.about{
-
-background:#000;
-color:#fff;
-padding:80px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-
-}
-
-.about div{
-
-width:48%;
-
-}
-
-.about h2{
-
-font-size:40px;
-margin-bottom:20px;
-
-}
-
-.about span{
-
-color:#FFC107;
-
-}
-
-footer{
-
-background:#111;
-color:#fff;
-padding:40px;
-text-align:center;
-
-}
-
-footer span{
-
-color:#FFC107;
-
-}
-
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#fff;color:#111}
+header,footer{background:#000;color:#fff;padding:20px;text-align:center}
+.hero,.about{display:flex;gap:30px;align-items:center;justify-content:space-between;padding:50px;background:#111;color:#fff}
+.hero img,.about img{width:45%;max-width:500px;border:3px solid #FFC107;border-radius:12px}
+.hero .text,.about .text{width:50%}
+span{color:#FFC107}
+.btn{display:inline-block;margin-top:20px;padding:12px 24px;background:#FFC107;color:#000;text-decoration:none;border-radius:30px}
+.services{padding:50px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px}
+.card{border:1px solid #ddd;padding:20px;text-align:center}
 </style>
-
+<script>
+const LOGO="https://via.placeholder.com/180x60?text=LOGO";
+const HERO="https://via.placeholder.com/800x500?text=Hero+Image";
+const ABOUT="https://via.placeholder.com/800x500?text=About+Image";
+</script>
 </head>
-
 <body>
-
-<header>
-
-<div class="logo">
-YOUR LOGO
-</div>
-
-<nav>
-
-<a href="#">Home</a>
-<a href="#">Services</a>
-<a href="#">Portfolio</a>
-<a href="#">About</a>
-<a href="#">Contact</a>
-
-</nav>
-
-</header>
+<header><img id="logo" style="height:60px"><h2>PrintsPreview</h2></header>
 
 <section class="hero">
-
-<div class="hero-text">
-
-<h1>
-DESIGN.<br>
-<span>PRINT.</span><br>
-DELIVER.
-</h1>
-
-<p>
-
-Professional Printing &
-Creative Designing Solutions.
-
-</p>
-
-<a href="#" class="btn">
-Get Quote
-</a>
-
+<div class="text">
+<h1>DESIGN.<br><span>PRINT.</span><br>DELIVER.</h1>
+<p>Professional Printing & Creative Designing Solutions.</p>
+<a class="btn" href="#">Get Quote</a>
 </div>
-
-<div class="hero-image">
-
-Website Banner Image
-
-</div>
-
+<img id="heroImg">
 </section>
 
 <section class="services">
-
-<h2 class="title">
-Our <span>Services</span>
-</h2>
-
+<h2>Our <span>Services</span></h2>
 <div class="grid">
-
-<div class="card">
-<h3>Visiting Cards</h3>
-<p>Premium business cards.</p>
+<div class="card">Visiting Cards</div>
+<div class="card">Flex Printing</div>
+<div class="card">Offset Printing</div>
+<div class="card">Digital Printing</div>
+<div class="card">Logo Design</div>
+<div class="card">Graphic Design</div>
 </div>
-
-<div class="card">
-<h3>Flex Printing</h3>
-<p>Outdoor & Indoor Flex.</p>
-</div>
-
-<div class="card">
-<h3>Offset Printing</h3>
-<p>Books, Bills & Stationery.</p>
-</div>
-
-<div class="card">
-<h3>Digital Printing</h3>
-<p>Fast & High Quality.</p>
-</div>
-
-<div class="card">
-<h3>Logo Design</h3>
-<p>Creative Brand Identity.</p>
-</div>
-
-<div class="card">
-<h3>Graphic Design</h3>
-<p>Posters, Flyers & Brochures.</p>
-</div>
-
-</div>
-
 </section>
 
 <section class="about">
-
-<div>
-
+<div class="text">
 <h2>Why <span>PrintsPreview?</span></h2>
-
-<p>
-
-✔ Premium Quality Printing<br><br>
-
-✔ Fast Delivery<br><br>
-
-✔ Creative Designing<br><br>
-
-✔ Affordable Price<br><br>
-
-✔ Customer Satisfaction
-
-</p>
-
+<p>✔ Premium Quality Printing<br>✔ Fast Delivery<br>✔ Creative Designing<br>✔ Affordable Price</p>
 </div>
-
-<div class="hero-image">
-
-Your Work Preview
-
-</div>
-
+<img id="aboutImg">
 </section>
 
-<footer>
+<footer>© 2026 PrintsPreview</footer>
 
-<h3>PRINTSPREVIEW</h3>
-
-<p>
-
-All Types of Printing | Designing | Branding
-
-</p>
-
-<br>
-
-<p>
-
-© 2026 <span>PrintsPreview</span>. All Rights Reserved.
-
-</p>
-
-</footer>
-
+<script>
+document.getElementById("logo").src=LOGO;
+document.getElementById("heroImg").src=HERO;
+document.getElementById("aboutImg").src=ABOUT;
+</script>
 </body>
 </html>
